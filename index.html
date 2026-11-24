@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeatSpot | Examination Hall & Seat Portal</title>
+    <link rel="icon" type="image/png" href="desk.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Shared Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="seatspotlogo.png" alt="SeatSpot Logo" onerror="this.style.display='none'">
+                <span>SeatSpot <em>Exam Portal</em></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Find Seat</a></li>
+                <li><a href="schedule.html">Exam Schedule &amp; Halls</a></li>
+                <li><a href="guidelines.html">Rules &amp; Helpdesk</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero">
+        <div class="hero-inner">
+            <span class="pill-badge">End-Term Theory &amp; Practical Examinations 2026</span>
+            <h1>University Examination Hall &amp; Seating Portal</h1>
+            <p>Search your roll number to verify your examination block, room number, reporting time, and exact desk position inside the hall.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <strong>04</strong>
+                    <span>Academic Blocks</span>
+                </div>
+                <div class="stat-item">
+                    <strong>24</strong>
+                    <span>Examination Halls</span>
+                </div>
+                <div class="stat-item">
+                    <strong>09:30 AM</strong>
+                    <span>Morning Shift Reporting</span>
+                </div>
+                <div class="stat-item">
+                    <strong>01:30 PM</strong>
+                    <span>Afternoon Shift Reporting</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="page-container">
+        <div class="finder-layout">
+            <!-- Left Column: Search Form -->
+            <section class="panel search-panel">
+                <div class="panel-header">
+                    <h2>Locate Your Examination Seat</h2>
+                    <p>Enter your university roll number (101 to 110) below.</p>
+                </div>
+
+                <form id="seat-form">
+                    <label for="roll-number">Student Roll Number</label>
+                    <div class="search-row">
+                        <input type="text" id="roll-number" placeholder="e.g., 101" required>
+                        <button type="submit" class="btn-primary">Search Seat</button>
+                    </div>
+                </form>
+
+                <div class="quick-demo">
+                    <span class="demo-label">Quick Test Roll Nos:</span>
+                    <button type="button" class="demo-chip" onclick="quickSearch('101')">101</button>
+                    <button type="button" class="demo-chip" onclick="quickSearch('104')">104</button>
+                    <button type="button" class="demo-chip" onclick="quickSearch('107')">107</button>
+                    <button type="button" class="demo-chip" onclick="quickSearch('110')">110</button>
+                </div>
+
+                <div class="notice-box">
+                    <strong>Important Notice:</strong> Seating plans are updated 45 minutes prior to each shift. If your roll number does not appear, submit a query on the <a href="guidelines.html#helpdesk">Exam Cell Helpdesk</a> page.
+                </div>
+            </section>
+
+            <!-- Right Column: Seat Result & Visual Hall Map -->
+            <section id="result-panel" class="panel result-panel">
+                <div class="empty-state">
+                    <div class="empty-icon">🎓</div>
+                    <h3>No Roll Number Searched Yet</h3>
+                    <p>Enter your roll number on the left to generate your official seating slip and view your highlighted desk on the classroom map.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Quick Navigation Cards to Other Pages -->
+        <section class="portal-cards">
+            <div class="info-card">
+                <span class="card-tag">Page 02</span>
+                <h3>Exam Date-Sheet &amp; Hall Directory</h3>
+                <p>Browse course-wise exam dates, shift timings, block locations, and hall capacities across campus.</p>
+                <a href="schedule.html" class="card-link">View Full Schedule &rarr;</a>
+            </div>
+            <div class="info-card">
+                <span class="card-tag">Page 03</span>
+                <h3>Hall Rules &amp; Student Helpdesk</h3>
+                <p>Review mandatory exam day documents, prohibited electronic items, and contact the exam controller.</p>
+                <a href="guidelines.html" class="card-link">Read Guidelines &rarr;</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <p><strong>SeatSpot Examination Portal</strong> &mdash; Department of Computer Science &amp; Engineering (CSE326)</p>
+            <p class="footer-sub">University Examination Seating &amp; Hall Management System</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Schedule &amp; Halls | SeatSpot</title>
+    <link rel="icon" type="image/png" href="desk.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Shared Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="seatspotlogo.png" alt="SeatSpot Logo" onerror="this.style.display='none'">
+                <span>SeatSpot <em>Exam Portal</em></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Find Seat</a></li>
+                <li><a href="schedule.html" class="active">Exam Schedule &amp; Halls</a></li>
+                <li><a href="guidelines.html">Rules &amp; Helpdesk</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Subpage Header -->
+    <header class="sub-hero">
+        <div class="hero-inner">
+            <span class="pill-badge">Academic Calendar &amp; Venue Allocation</span>
+            <h1>Examination Schedule &amp; Hall Directory</h1>
+            <p>Filter upcoming theory and lab examinations by course code, subject name, or academic block.</p>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <!-- Filter Controls -->
+        <section class="panel">
+            <div class="table-controls">
+                <div>
+                    <h2>End-Term Date Sheet</h2>
+                    <p>Reporting time is strictly 30 minutes before exam commencement.</p>
+                </div>
+                <div class="filter-inputs">
+                    <input type="text" id="schedule-search" placeholder="Search course code or subject..." onkeyup="filterSchedule()">
+                    <select id="block-filter" onchange="filterSchedule()">
+                        <option value="ALL">All Academic Blocks</option>
+                        <option value="Block 32">Block 32</option>
+                        <option value="Block 34">Block 34</option>
+                        <option value="Block 38">Block 38</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Schedule Table -->
+            <div class="table-wrapper">
+                <table class="exam-table" id="exam-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Course Code</th>
+                            <th>Subject Title</th>
+                            <th>Shift &amp; Time</th>
+                            <th>Block &amp; Rooms</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>28 Nov 2026</td>
+                            <td><strong>CSE326</strong></td>
+                            <td>Internet Programming Laboratory</td>
+                            <td>Morning (10:00 AM - 01:00 PM)</td>
+                            <td>Block 34 (Rooms 201 - 204)</td>
+                            <td><span class="status-badge confirmed">Seating Live</span></td>
+                        </tr>
+                        <tr>
+                            <td>30 Nov 2026</td>
+                            <td><strong>INT108</strong></td>
+                            <td>Python Programming</td>
+                            <td>Morning (10:00 AM - 01:00 PM)</td>
+                            <td>Block 32 (Rooms 105 - 110)</td>
+                            <td><span class="status-badge confirmed">Seating Live</span></td>
+                        </tr>
+                        <tr>
+                            <td>02 Dec 2026</td>
+                            <td><strong>MTH165</strong></td>
+                            <td>Mathematics for Engineers</td>
+                            <td>Afternoon (02:00 PM - 05:00 PM)</td>
+                            <td>Block 38 (Rooms 301 - 308)</td>
+                            <td><span class="status-badge confirmed">Seating Live</span></td>
+                        </tr>
+                        <tr>
+                            <td>04 Dec 2026</td>
+                            <td><strong>MEC136</strong></td>
+                            <td>Engineering Graphics &amp; Digital Fabrication</td>
+                            <td>Morning (10:00 AM - 01:00 PM)</td>
+                            <td>Block 34 (CAD Labs 1 - 4)</td>
+                            <td><span class="status-badge upcoming">Scheduled</span></td>
+                        </tr>
+                        <tr>
+                            <td>06 Dec 2026</td>
+                            <td><strong>CSE111</strong></td>
+                            <td>Orientation to Computing</td>
+                            <td>Afternoon (02:00 PM - 05:00 PM)</td>
+                            <td>Block 32 (Rooms 401 - 406)</td>
+                            <td><span class="status-badge upcoming">Scheduled</span></td>
+                        </tr>
+                        <tr>
+                            <td>08 Dec 2026</td>
+                            <td><strong>INT335</strong></td>
+                            <td>Design Thinking &amp; Innovation</td>
+                            <td>Morning (10:00 AM - 01:00 PM)</td>
+                            <td>Block 38 (Seminar Halls A &amp; B)</td>
+                            <td><span class="status-badge upcoming">Scheduled</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        
+        <!-- Block Directory Overview -->
+        <section class="portal-cards three-col">
+            <div class="info-card">
+                <span class="card-tag">Block 32</span>
+                <h3>School of Computer Science</h3>
+                <p><strong>Floors:</strong> Ground + 4 Floors<br><strong>Halls:</strong> 101 to 412<br><strong>Landmark:</strong> Near Central Library</p>
+            </div>
+            <div class="info-card">
+                <span class="card-tag">Block 34</span>
+                <h3>Programming &amp; CAD Labs</h3>
+                <p><strong>Floors:</strong> Ground + 3 Floors<br><strong>Halls:</strong> 201 to 310<br><strong>Landmark:</strong> Near Central Library</p>
+            </div>
+            <div class="info-card">
+                <span class="card-tag">Block 38</span>
+                <h3>Main Examination Complex</h3>
+                <p><strong>Floors:</strong> Ground + 5 Floors<br><strong>Halls:</strong> 301 to 515<br><strong>Landmark:</strong> Near Central Library</p>
+            </div>
+        </section>
+
+    <!-- Shared Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <p><strong>SeatSpot Examination Portal</strong> &mdash; Department of Computer Science &amp; Engineering (CSE326)</p>
+            <p class="footer-sub">Designed &amp; Developed by Sakshi Verma | Reg. No: 12619685</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

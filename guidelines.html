@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules &amp; Helpdesk | SeatSpot</title>
+    <link rel="icon" type="image/png" href="desk.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Shared Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="seatspotlogo.png" alt="SeatSpot Logo" onerror="this.style.display='none'">
+                <span>SeatSpot <em>Exam Portal</em></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Find Seat</a></li>
+                <li><a href="schedule.html">Exam Schedule &amp; Halls</a></li>
+                <li><a href="guidelines.html" class="active">Rules &amp; Helpdesk</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Subpage Header -->
+    <header class="sub-hero">
+        <div class="hero-inner">
+            <span class="pill-badge">Student Compliance &amp; Support</span>
+            <h1>Examination Guidelines &amp; Helpdesk</h1>
+            <p>Verify your exam-day checklist, review university code of conduct, or raise a seating discrepancy ticket.</p>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <div class="finder-layout">
+            <!-- Left Column: Rules & Interactive Checklist -->
+            <section class="panel">
+                <h2>Mandatory Examination Rules</h2>
+                <p class="subtitle">Failure to comply with university examination regulations may lead to disqualification.</p>
+
+                <ul class="rules-list">
+                    <li><strong>1. Reporting Window:</strong> Candidates must occupy their assigned seats at least 20 minutes before the scheduled start time. Entry closes 15 minutes after commencement.</li>
+                    <li><strong>2. Mandatory Documents:</strong> Physical University ID Card and printed Hall Ticket/Admit Card are compulsory for hall entry.</li>
+                    <li><strong>3. Prohibited Electronics:</strong> Smartwatches, mobile phones, Bluetooth earbuds, and programmable calculators are strictly banned inside exam halls.</li>
+                    <li><strong>4. Seat Discipline:</strong> Occupy only the desk matching your exact Seat Number on SeatSpot. Unauthorized seat swapping is treated as malpractice.</li>
+                    <li><strong>5. Attendance Sheet:</strong> Sign the invigilator's attendance sheet and verify your answer booklet serial number before writing.</li>
+                </ul>
+
+                <div class="checklist-box">
+                    <h3>Pre-Exam Student Readiness Checklist</h3>
+                    <label class="check-item"><input type="checkbox"> University Photo ID Card packed</label>
+                    <label class="check-item"><input type="checkbox"> Printed Exam Hall Ticket / Admit Card</label>
+                    <label class="check-item"><input type="checkbox"> Room &amp; Seat Number verified on SeatSpot</label>
+                    <label class="check-item"><input type="checkbox"> Blue/Black pens &amp; transparent pouch ready</label>
+                    <label class="check-item"><input type="checkbox"> Mobile phone &amp; smartwatch left in bag outside</label>
+                </div>
+            </section>
+
+            <!-- Right Column: Exam Cell Helpdesk Form -->
+            <section id="helpdesk" class="panel">
+                <h2>Exam Cell Helpdesk</h2>
+                <p class="subtitle">Roll number missing or seat clash? Submit an urgent ticket to the Examination Control Room.</p>
+
+                <form id="helpdesk-form">
+                    <div class="form-group">
+                        <label for="student-name">Full Name</label>
+                        <input type="text" id="student-name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student-reg">Roll / Registration Number</label>
+                        <input type="text" id="student-reg" placeholder="e.g., 12619685" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issue-type">Issue Category</label>
+                        <select id="issue-type">
+                            <option value="Roll Number Not Found">Roll Number Not Found in Portal</option>
+                            <option value="Duplicate Seat Allocation">Duplicate / Clashing Seat Number</option>
+                            <option value="Wrong Course / Subject">Incorrect Course Code Listed</option>
+                            <option value="Medical / Special Seating">Special Seating Accommodation</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issue-desc">Issue Details</label>
+                        <textarea id="issue-desc" rows="4" placeholder="Briefly describe your issue and exam date..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary full-width">Submit Helpdesk Ticket</button>
+                </form>
+
+                <div id="ticket-response" class="ticket-response" style="display: none;"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <p><strong>SeatSpot Examination Portal</strong> &mdash; Department of Computer Science &amp; Engineering (CSE326)</p>
+            <p class="footer-sub">Designed &amp; Developed by Sakshi Verma | Reg. No: 12619685</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
